@@ -1,0 +1,189 @@
+/* Color Scheme */
+/* Primary: #2E8B57 (Sea Green) */
+/* Secondary: #20B2AA (Light Sea Green) */
+/* Accent: #087AC4 (Ocean Blue) */
+/* Background: #F5F5F5 (White Smoke) */
+/* Text: #333333 (Dark Gray) */
+
+/* Base Styles */
+:root {
+  --primary-color: #2E8B57;
+  --secondary-color: #20B2AA;
+  --accent-color: #087AC4;
+  --bg-color: #F5F5F5;
+  --text-color: #333333;
+  --font-serif: 'Roboto', sans-serif;
+  --font-sans: 'Open Sans', sans-serif;
+  --line-height: 1.5;
+  --font-size-mobile: 0.75rem;
+  --font-size-desktop: 1rem;
+  --max-width: 60rem;
+  --gutter: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: var(--line-height);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-size: var(--font-size-mobile);
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+}
+
+/* Layout */
+.navbar, .footer {
+  background-color: var(--secondary-color);
+  color: #20B2AA;
+  padding: 1rem 0;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0 var(--gutter);
+}
+
+.navbar li {
+  margin-bottom: 0.5rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.masthead {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/masthead-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 4rem var(--gutter);
+  text-align: center;
+}
+
+.masthead h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.25rem;
+}
+
+.main-content {
+  padding: var(--gutter);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.solution-buttons {
+  margin-bottom: 2rem;
+}
+
+.solution-btn {
+  padding: 0.75rem 1.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: inherit;
+}
+
+#active-button {
+  background-color: var(--accent-color);
+  font-weight: bold;
+}
+
+.solution-content {
+  margin-top: 1rem;
+}
+
+.solution-content h1 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.solution-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.solution-content p {
+  margin-bottom: 1rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem var(--gutter);
+}
+
+.social-links {
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* Tablet/Desktop View */
+@media screen and (min-width: 30rem) {
+  body {
+      font-size: var(--font-size-desktop);
+  }
+  
+  .navbar ul {
+      display: flex;
+      justify-content: flex-start;
+  }
+  
+  .navbar li {
+      margin-right: 2rem;
+      margin-bottom: 0;
+  }
+  
+  .masthead {
+      padding: 6rem var(--gutter);
+  }
+  
+  .masthead h1 {
+      font-size: 3rem;
+  }
+  
+  .tagline {
+      font-size: 1.5rem;
+  }
+  
+  .solution-content img {
+      float: left;
+      width: 25%;
+      margin-right: 2rem;
+      margin-bottom: 0.5rem;
+  }
+  
+  .solution-content::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .main-content {
+      margin: 0 auto;
+  }
+}
